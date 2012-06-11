@@ -3,7 +3,7 @@ auto:        false
 server:      false
 server_port: 4000
 baseurl:    /
-url: apra.github.com
+url: http://apra.github.com
 permalink: /_site/:categories/:day-:month-:year/:title
 
 source:      .
