@@ -4,6 +4,7 @@ server:      false
 server_port: 4000
 baseurl:    /
 url: apra.github.com
+permalink: /_site/:categories/:day-:month-:year/:title
 
 source:      .
 destination: ./_site
@@ -24,3 +25,11 @@ maruku:
 
 rdiscount:
   extensions: []
+
+markdown: rdiscount
+pygments: true
+lsi: true
+exclude: ['README.markdown', 'README_FOR_COLLABORATORS.markdown', 'Gemfile.lock', 'Gemfile']
+production: false
+
+paginate: 3 
