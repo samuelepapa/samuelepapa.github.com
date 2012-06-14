@@ -1,0 +1,39 @@
+safe:        false
+auto:        false
+server:      false
+server_port: 4000
+baseurl:    /
+url: http://apra.github.com
+permalink: /:categories/:day-:month-:year/:title
+
+tag_dir: tags
+tag_title_prefix: "Tags &raquo; "
+related_tags: true
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+pygments:    false
+markdown:    maruku
+permalink:   date
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:
+  extensions: []
+
+markdown: rdiscount
+pygments: true
+lsi: true
+exclude: ['README.markdown', 'README_FOR_COLLABORATORS.markdown', 'Gemfile.lock', 'Gemfile']
+production: false
+
+paginate: 3 
