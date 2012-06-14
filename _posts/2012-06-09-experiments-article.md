@@ -1,8 +1,8 @@
 ---
 layout: post
-title: first article Experiments
+title: First article experiments
 category: experiments
-tags:
+tags: 
 - PHP
 - HTML
 - Javascript
