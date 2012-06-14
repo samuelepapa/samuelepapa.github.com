@@ -4,7 +4,11 @@ server:      false
 server_port: 4000
 baseurl:    /
 url: http://apra.github.com
-permalink: /_site/:categories/:day-:month-:year/:title
+permalink: /:categories/:day-:month-:year/:title
+
+tag_dir: tags
+tag_title_prefix: "Tags &raquo; "
+related_tags: true
 
 source:      .
 destination: ./_site

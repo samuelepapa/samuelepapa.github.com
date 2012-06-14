@@ -3,31 +3,72 @@ layout: default
 no_sidebar: true
 ---
 
+<section id="main">
 {% for post in site.categories.experiments %}
+	{% if forloop.first %}
+	<article id="experiments">
+	   <!-- here is last post of experiments category -->
+	   <h2 class="art-title">{{ post.title }}<span class="dot">.</span></h2>
+	   <div class="art-image">
+				<img src="{{ site.url }}/uploads/{{ post.image }}" />   
+	   </div>
+	   <div class="content">
+			<h2>Experiments</h2>
+			<div class="iconclass"><img src="{{site.url}}/images/experiments-logo.png" /></div>
+			<div clas="tags">
+				{% for tag in post.tags %}
+      			<li class="tag"><a href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a></li>
+    			{% endfor %}			
+			</div>	   
+	   </div>
+	   </article>
 
-
-   <!-- here add you post markup -->
-   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-   <p class="author">
-    <span class="date">{{post.date}}</span>
-  </p>
-	<img src="{{ site.url }}/images/{{ post.image }}" />
-  <div class="content">
-    {{ post.content }}
-  </div>
+	{% endif %}
 {% endfor %}
+	 
+
 {% for post in site.categories.thoughts %}
-
-{{ post.custom }}
-   <!-- here add you post markup -->
-   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-   <p class="author">
-    <span class="date">{{post.date}}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
+	{% if forloop.first %}
+	<article id="thogughts">
+	   <h2 class="art-title">{{ post.title }}<span class="dot">.</span></h2>
+	   <div class="art-image">
+				<img src="{{ site.url }}/uploads/{{ post.image }}" />   
+	   </div>
+	   <div class="content">
+			<h2>Experiments</h2>
+			<div class="iconclass"><img src="{{site.url}}/images/thoughts-logo.png" /></div>
+			<div clas="tags">
+				{% for tag in post.tags %}
+      			<li class="tag"><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+    			{% endfor %}			
+			</div>	   
+	   </div>
+	   </article>
+	{% endif %}
 {% endfor %}
+	
+{% for post in site.categories.projects %}
+	{% if forloop.first %}
+	<article id="projects">
+	   <!-- here is last post of projects category -->
+	   <h2 class="art-title">{{ post.title }}<span class="dot">.</span></h2>
+	   <div class="art-image">
+				<img src="{{ site.url }}/uploads/{{ post.image }}" />   
+	   </div>
+	   <div class="content">
+			<h2>Experiments</h2>
+			<div class="iconclass"><img src="{{site.url}}/images/experiments-logo.png" /></div>
+			<div clas="tags">
+				{% for tag in post.tags %}
+      			<li class="tag"><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+    			{% endfor %}			
+			</div>	   
+	   </div>
+	   </article>
+
+	{% endif %}
+{% endfor %}
+
 
 <!-- Pagination links -->
 <div id="post-pagination" class="pagination">

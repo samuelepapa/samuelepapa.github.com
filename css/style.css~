@@ -10,6 +10,3 @@ Style CSS di Apra, Copyleft (\C) 2012
 p, article, section, header, div, span, a{
 	font-family:"Open Sans";
 }
-h1,h2,h3,h4,h5,h6{
-	font-family:"Cabin";
-}
