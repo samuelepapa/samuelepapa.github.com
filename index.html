@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href='http://fonts.googleapis.com/css?family=Cabin:700|Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
   <link href="http://localhost/_site/css/style.css" type="text/css" rel="stylesheet" />
-  
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="http://localhost/_site/js/site.js"></script>
 </head>
 
@@ -22,10 +22,10 @@
                 <li id="fork" class="hub">FORK ME ON</li><a target="_blank" href="http://github.com/Apra" id="github" class="hub">GITHUB</a>
             </ul>
         </div>
-    <a id="tit" href="<?php echo site_url() ?>">
+    <a id="tit" href="http://localhost/_site">
 	  <div id="title"> 
-	     <img src="<?php echo site_url() ?>/wp-content/themes/codefeeling/images/arrow.png" width="18" height="24" /> 
-	     <img src="<?php echo site_url() ?>/wp-content/themes/codefeeling/images/title.png" width="121" height="67" /> 
+	     <img src="http://localhost/_site/images/arrow.png" width="18" height="24" /> 
+	     <img src="http://localhost/_site/images/title.png" width="121" height="67" /> 
 	  </div>
       </a>
 </header>
@@ -35,7 +35,7 @@
       <section id="main">
 
 	
-	<article id="experiments">
+	<article data-url="http://localhost/_site/experiments/2012/06/09/experiments-article.html" id="experiments">
 	   <!-- here is last post of experiments category -->
 	   <h2 class="art-title">First article experiments<span class="dot">.</span></h2>
 	   <div class="art-image">
@@ -62,16 +62,20 @@
 
 
 	
-	<article id="thogughts">
+	<article data-url="http://localhost/_site/thoughts/2012/06/10/thoughts-article.html" id="thogughts">
 	   <h2 class="art-title">First thought<span class="dot">.</span></h2>
 	   <div class="art-image">
-				<img src="http://localhost/_site/uploads/" />   
+				<img src="http://localhost/_site/uploads/image1.jpg" />   
 	   </div>
 	   <div class="content">
 			<h2>Experiments</h2>
 			<div class="iconclass"><img src="http://localhost/_site/images/thoughts-logo.png" /></div>
 			<div clas="tags">
-							
+				
+      			<li class="tag"><a href="/tag/inspirational">inspirational</a></li>
+    			
+      			<li class="tag"><a href="/tag/talking">talking</a></li>
+    						
 			</div>	   
 	   </div>
 	   </article>
@@ -80,58 +84,57 @@
 	
 
 	
-	<article id="projects">
+	<article data-url="http://localhost/_site/projects/2012/06/09/first-article-projects.html" id="projects">
 	   <!-- here is last post of projects category -->
 	   <h2 class="art-title">first article projects<span class="dot">.</span></h2>
 	   <div class="art-image">
-				<img src="http://localhost/_site/uploads/" />   
+				<img src="http://localhost/_site/uploads/image2.jpg" />   
 	   </div>
 	   <div class="content">
 			<h2>Experiments</h2>
 			<div class="iconclass"><img src="http://localhost/_site/images/experiments-logo.png" /></div>
 			<div clas="tags">
-							
+				
+      			<li class="tag"><a href="http://localhost/_site/tag/"></a></li>
+    			
+      			<li class="tag"><a href="http://localhost/_site/tag/"></a></li>
+    						
 			</div>	   
 	   </div>
 	   </article>
 
 	
 
+<script>
+$('section#main article').each(function(){
+	$(this).on('click',function(){
+		window.location = $(this).data('url');
+	});
+});
+$(document).ready(function(){
+	if($(window).width()<900){
+	console.log('minore di 900');
+		$('body').find('section#main article .content h2').each(function(){
+			$(this).css('font-size',((3/900)*$(window).width())+'em')
+		});
+	}	
+	$('body').find('section#main article .content h2').each(function(){
+		$(this).data('size-font',$(this).css('font-size'));
+	});
+});
+$(window).resize(function(){
+	$('body').find('section#main article .content h2').each(function(){
+			$(this).css('font-size',((3/900)*$(window).width())+'em')
+		});
+});
 
-
-<!-- Pagination links -->
-<div id="post-pagination" class="pagination">
-
-  
-  <p class="previous disabled">
-    <span>Previous</span>
-  </p>
-  
-
-  <ul class="pages">
-    <li class="page">
-      
-      <span class="current-page">1</span>
-      
-    </li>
-
-    
-  </ul>
-
-  
-  <p class="next disabled">
-    <span>Next</span>
-  </p>
-  
-
-</div>
-</html>
-
+</script>
+</section>
 
     
     
     
-    Included file 'footer.html' not found in _includes directory
+    
     
 </body>
 </html>

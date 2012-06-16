@@ -7,9 +7,50 @@ Style CSS di Apra, Copyleft (\C) 2012
 	font-family: Bebas;
 	src: url('font/BEBAS.ttf');
 }
+*{
+	margin:0;
+	padding:0;
+}
 p, article, section, header, div, span, a{
 	font-family:"Open Sans";
 }
 h1,h2,h3,h4,h5,h6{
 	font-family:"Cabin";
+}
+img{
+	max-width:100%; /* And the magic happens... */
+}
+
+/*
+* INDEX.HTML
+*/
+section#main{
+	max-width:1000px;
+	margin:0 auto;
+}
+section#main article{
+	cursor:pointer;
+	float:left;
+	width:100%
+}
+section#main article h2.art-title{
+	margin: 1%;
+	width: 98%;
+	font-size: 4em;
+}
+section#main article .art-image{
+	width: 68%;
+	float: left;
+	margin: 1%;
+}
+section#main article .content{
+	float: left;
+	width: 28%;
+	margin: 1%;
+}
+section#main article .content .iconclass{
+	max-width:100px
+}
+section#main article .content h2{
+	font-size:3em;
 }
