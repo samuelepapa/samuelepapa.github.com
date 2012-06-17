@@ -54,3 +54,22 @@ section#main article .content .iconclass{
 section#main article .content h2{
 	font-size:3em;
 }
+
+/* MEDIA QUERIES*/
+@media (max-width: 850px) {
+	section#main article .art-image{
+		max-width: 700px;
+		margin: 0 auto;
+		width:100%;
+		float:none;		
+	}
+	section#main article .content{
+		width: 100%;
+		margin: 0 auto;
+		max-width: 700px;
+		float:none
+	}
+	section#main article .content .iconclass{
+		display:none;
+	}
+}

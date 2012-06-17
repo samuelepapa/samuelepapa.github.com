@@ -6,9 +6,9 @@
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href='http://fonts.googleapis.com/css?family=Cabin:700|Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-  <link href="http://localhost/_site/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="http://apra.github.com/css/style.css" type="text/css" rel="stylesheet" />
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script type="text/javascript" src="http://localhost/_site/js/site.js"></script>
+  <script type="text/javascript" src="http://apra.github.com/js/site.js"></script>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
                 <li id="fork" class="hub">FORK ME ON</li><a target="_blank" href="http://github.com/Apra" id="github" class="hub">GITHUB</a>
             </ul>
         </div>
-    <a id="tit" href="http://localhost/_site">
+    <a id="tit" href="http://apra.github.com">
 	  <div id="title"> 
-	     <img src="http://localhost/_site/images/arrow.png" width="18" height="24" /> 
-	     <img src="http://localhost/_site/images/title.png" width="121" height="67" /> 
+	     <img src="http://apra.github.com/images/arrow.png" width="18" height="24" /> 
+	     <img src="http://apra.github.com/images/title.png" width="121" height="67" /> 
 	  </div>
       </a>
 </header>
@@ -35,22 +35,22 @@
       <section id="main">
 
 	
-	<article data-url="http://localhost/_site/experiments/2012/06/09/experiments-article.html" id="experiments">
+	<article data-url="http://apra.github.com/experiments/2012/06/09/experiments-article.html" id="experiments">
 	   <!-- here is last post of experiments category -->
 	   <h2 class="art-title">First article experiments<span class="dot">.</span></h2>
 	   <div class="art-image">
-				<img src="http://localhost/_site/uploads/image1.jpg" />   
+				<img src="http://apra.github.com/uploads/image1.jpg" />   
 	   </div>
 	   <div class="content">
-			<h2>Experiments</h2>
-			<div class="iconclass"><img src="http://localhost/_site/images/experiments-logo.png" /></div>
+			<h2><a href="http://apra.github.com/categories/experiments">Experiments</a></h2>
+			<div class="iconclass"><img src="http://apra.github.com/images/experiments-logo.png" /></div>
 			<div clas="tags">
 				
-      			<li class="tag"><a href="http://localhost/_site/tag/php">php</a></li>
+      			<li class="tag"><a href="http://apra.github.com/tag/php">php</a></li>
     			
-      			<li class="tag"><a href="http://localhost/_site/tag/html">html</a></li>
+      			<li class="tag"><a href="http://apra.github.com/tag/html">html</a></li>
     			
-      			<li class="tag"><a href="http://localhost/_site/tag/javascript">javascript</a></li>
+      			<li class="tag"><a href="http://apra.github.com/tag/javascript">javascript</a></li>
     						
 			</div>   
 	   </div>
@@ -62,14 +62,14 @@
 
 
 	
-	<article data-url="http://localhost/_site/thoughts/2012/06/10/thoughts-article.html" id="thogughts">
+	<article data-url="http://apra.github.com/thoughts/2012/06/10/thoughts-article.html" id="thogughts">
 	   <h2 class="art-title">First thought<span class="dot">.</span></h2>
 	   <div class="art-image">
-				<img src="http://localhost/_site/uploads/image1.jpg" />   
+				<img src="http://apra.github.com/uploads/image1.jpg" />   
 	   </div>
 	   <div class="content">
 			<h2>Experiments</h2>
-			<div class="iconclass"><img src="http://localhost/_site/images/thoughts-logo.png" /></div>
+			<div class="iconclass"><img src="http://apra.github.com/images/thoughts-logo.png" /></div>
 			<div clas="tags">
 				
       			<li class="tag"><a href="/tag/inspirational">inspirational</a></li>
@@ -84,20 +84,20 @@
 	
 
 	
-	<article data-url="http://localhost/_site/projects/2012/06/09/first-article-projects.html" id="projects">
+	<article data-url="http://apra.github.com/projects/2012/06/09/first-article-projects.html" id="projects">
 	   <!-- here is last post of projects category -->
 	   <h2 class="art-title">first article projects<span class="dot">.</span></h2>
 	   <div class="art-image">
-				<img src="http://localhost/_site/uploads/image2.jpg" />   
+				<img src="http://apra.github.com/uploads/image2.jpg" />   
 	   </div>
 	   <div class="content">
 			<h2>Experiments</h2>
-			<div class="iconclass"><img src="http://localhost/_site/images/experiments-logo.png" /></div>
+			<div class="iconclass"><img src="http://apra.github.com/images/experiments-logo.png" /></div>
 			<div clas="tags">
 				
-      			<li class="tag"><a href="http://localhost/_site/tag/"></a></li>
+      			<li class="tag"><a href="http://apra.github.com/tag/"></a></li>
     			
-      			<li class="tag"><a href="http://localhost/_site/tag/"></a></li>
+      			<li class="tag"><a href="http://apra.github.com/tag/"></a></li>
     						
 			</div>	   
 	   </div>
@@ -112,7 +112,7 @@ $('section#main article').each(function(){
 	});
 });
 $(document).ready(function(){
-	if($(window).width()<900){
+	if($(window).width()<900&&$(window).width()>850){
 	console.log('minore di 900');
 		$('body').find('section#main article .content h2').each(function(){
 			$(this).css('font-size',((3/900)*$(window).width())+'em')
@@ -123,9 +123,10 @@ $(document).ready(function(){
 	});
 });
 $(window).resize(function(){
-	$('body').find('section#main article .content h2').each(function(){
+	if($(window).width()<900&&$(window).width()>850){$('body').find('section#main article .content h2').each(function(){
 			$(this).css('font-size',((3/900)*$(window).width())+'em')
 		});
+		}
 });
 
 </script>
@@ -134,7 +135,7 @@ $(window).resize(function(){
     
     
     
-    
+    Included file 'footer.html' not found in _includes directory
     
 </body>
 </html>
