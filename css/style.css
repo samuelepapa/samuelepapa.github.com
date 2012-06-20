@@ -7,20 +7,77 @@ Style CSS di Apra, Copyleft (\C) 2012
 	font-family: Bebas;
 	src: url('font/BEBAS.ttf');
 }
+/*SCROLLBAR*/
+/****SCROLLBAR****/
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar:horizzontal{
+	height:12px;
+}
+::-webkit-scrollbar-track {
+	background-color:#F1F1F1;
+-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#f4343f
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+}
+::-webkit-scrollbar-thumb:hover {
+-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+}
 *{
 	margin:0;
 	padding:0;
 }
 p, article, section, header, div, span, a{
 	font-family:"Open Sans";
+	
 }
-h1,h2,h3,h4,h5,h6{
-	font-family:"Cabin";
+p{
+	color:#616161;
+	font-size: 0.9em
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:'Cabin';
+	font-weight:bold;
+	color:#333
+}
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size: 1.2em;
+	font-weight: normal;
 }
 img{
 	max-width:100%; /* And the magic happens... */
 }
-
+li{
+	list-style-type: none;	
+}
+a {
+	text-decoration:none;
+	color:#f44f59;
+	border:0;
+	border-color:transparent;
+	background-color:transparent;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+a:hover {
+	color:#f4202c
+}
+::selection {
+	background-color:#f4343f;
+	color:white;
+}
+input:focus {
+	outline:none;
+}
 /*
 * INDEX.HTML
 */
@@ -52,9 +109,124 @@ section#main article .content .iconclass{
 	max-width:100px
 }
 section#main article .content h2{
-	font-size:3em;
+	font-size:2.7em;
+}
+/*HEADER.HTML*/
+header {
+	width: 100%;
+	height: 155px;
+}
+#top-bar{
+	height: 41px;
+	max-width: 800px;
+	display: block;
+	margin: 0 auto;	
 }
 
+#tweet-icon{
+	background-color: #F44F59;
+	height: 41px;
+	float: left;
+}
+#top-bar #tweet{
+	font-family: 'Cabin';
+	font-weight: 700;
+	background-color: #C2E1F9;
+	height: 41px;
+	line-height: 37px;
+	float: left;
+	width: 60%;
+	color: white;
+	font-size: 0.7em;
+	overflow: hidden;
+}
+#top-bar ul:last-child, #top-bar ul:last-child a{
+	width: 205px;
+	float: left;
+	font-family:'Bebas';
+	font-size: 1.2em;
+	color: white;
+	line-height: 41px;
+	text-align: center;
+}
+
+#top-bar ul:last-child .hub#fork {
+	background-color:#a3d3f9;
+	width:125px;
+	height:41px;
+	float: left;
+}
+#top-bar ul:last-child .hub#github {
+	background-color:#f4343f;
+	width:80px;
+	height:41px;
+	cursor:pointer;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+#top-bar ul:last-child .hub#github:hover {
+	background-color:#333333
+}
+#festoonleft::after {
+content: "";
+position: relative;
+left: 25px;
+border-width: 25px 25px 25px 0px;
+border-style: solid;
+border-color: #F4343F transparent;
+display: block;
+width: 0;
+float: right;
+}
+#festoonleft {
+float: left;
+width: 35%;
+height: 50px;
+background-color: #F4343F;
+margin-top: 20px;
+}
+#festoonright::after {
+content: "";
+position: relative;
+right: 25px;
+border-width: 25px 0px 25px 25px;
+border-style: solid;
+border-color: #A3D3F9 transparent;
+display: block;
+width: 0;
+float: left;
+}
+#festoonright {
+float: right;
+width: 35%;
+height: 50px;
+background-color: #A3D3F9;
+margin-top: 20px;
+}
+#tit{
+	float: left;
+	width:30%;
+	margin-top: 20px;
+}
+#tit #title img:first-child{
+position: relative;
+top: 4px;
+float: left;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+transition: all 0.2s linear;
+margin-right: 5px;
+}
+#tit:hover #title img:first-child{
+	top: 35px;
+}
+#title{
+	width: 150px;
+	margin: 0 auto;
+}
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
 	section#main article .art-image{

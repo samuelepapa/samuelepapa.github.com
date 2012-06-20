@@ -16,20 +16,41 @@
     <header>
         <div id="top-bar">
             <ul>
-                <li id="tweet-icon"><a href="http://twitter.com/codefeeling" target="_blank"><img width="37" height="21" src="<?php echo site_url() ?>/wp-content/themes/codefeeling/images/twit.png"/></a><li id="tweet"></li>
+                <li id="tweet-icon"><a href="http://twitter.com/codefeeling" target="_blank"><img width="41" height="41" src="http://apra.github.com/images/twitter-bird.png"/></a><li id="tweet"></li>
             </ul>
             <ul>   
-                <li id="fork" class="hub">FORK ME ON</li><a target="_blank" href="http://github.com/Apra" id="github" class="hub">GITHUB</a>
+                <li id="fork" class="hub">FOLLOW ME ON</li><a target="_blank" href="http://github.com/Apra" id="github" class="hub">GITHUB</a>
             </ul>
         </div>
-    <a id="tit" href="http://apra.github.com">
+   <div id="festoonleft"></div> 
+   <a id="tit" href="http://apra.github.com">
+    
 	  <div id="title"> 
 	     <img src="http://apra.github.com/images/arrow.png" width="18" height="24" /> 
 	     <img src="http://apra.github.com/images/title.png" width="121" height="67" /> 
 	  </div>
-      </a>
+	  
+      </a><div id="festoonright"></div>
 </header>
+<script type="text/javascript" >
 
+$(function(){
+$("#tweet").html('Probably loading last tweet...');
+$.getJSON("http://twitter.com/statuses/user_timeline/codefeeling.json?callback=?", function(data) {
+pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
+			patthash=/(#)(\w+)/;
+			patttagg=/(\@)(\S+)/;
+			tagg=patttagg.exec(data[0].text);
+			linc=pattern.exec(data[0].text);
+			hash=patthash.exec(data[0].text);
+			text=data[0].text;
+			(linc) ? text=text.replace(linc[0],'<a target="_blank" href="'+linc[0]+'">'+linc[0]+'</a>'):text;
+			(hash) ? text=text.replace(hash[0],'<a target="_blank" href="https://twitter.com/#!/search?q='+hash[2]+'">'+hash[0]+'</a>'):text;  
+     		(tagg) ? text=text.replace(tagg[0],'<a target="_blank" href="https://twitter.com/'+tagg[2]+'">'+tagg[0]+'</a>'):text;
+     $("#tweet").html('<a target="_blank" href="http://twitter.com/codefeeling" style="float:left;margin: 0 4px;color:#f44f59">@codefeeling</a>'+text);
+});
+});
+</script>
     
     
       <h2 class="post_title">Posts Tagged &ldquo;javascript&rdquo;</h2>
