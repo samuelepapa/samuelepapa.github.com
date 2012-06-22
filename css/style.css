@@ -281,6 +281,10 @@ margin-right: 5px;
 #tit:hover #title img:first-child{
 	top: 35px;
 }
+#title img{
+	outline: none;
+	border:none;
+}
 #title{
 	width: 150px;
 	margin: 0 auto;
