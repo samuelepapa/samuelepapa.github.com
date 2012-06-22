@@ -71,6 +71,13 @@ a {
 a:hover {
 	color:#f4202c
 }
+.dot{
+	font-family: 'Cabin';
+}
+.clearer{
+	clear: both;
+	float: none;
+}
 ::selection {
 	background-color:#f4343f;
 	color:white;
@@ -86,7 +93,6 @@ section#main{
 	margin:0 auto;
 }
 section#main article{
-	cursor:pointer;
 	float:left;
 	width:100%
 }
@@ -94,33 +100,84 @@ section#main article h2.art-title{
 	margin: 1%;
 	width: 98%;
 	font-size: 4em;
+	cursor: pointer;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+transition: all 0.2s linear;
 }
 section#main article .art-image{
 	width: 68%;
 	float: left;
 	margin: 1%;
+	cursor: pointer;
 }
 section#main article .content{
 	float: left;
 	width: 28%;
-	margin: 1%;
 }
 section#main article .content .iconclass{
 	max-width:100px
 }
 section#main article .content h2{
-	font-size:2.7em;
+	font-size:2.5em;
+}
+section#main article .content h2 a,section#main article .content h2{
+	font-family: 'Bebas';
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	padding: 0px 2% 4px;
+	margin-bottom: 10px;
+}
+section#main article#experiments .content h2 a,section#main article#experiments .content .tags .tag a{
+	color: #f4343f;
+}
+section#main article#experiments .content h2 a:hover,section#main article#experiments .content .tags .tag a:hover{
+	background-color: #f4343f;
+	color: white;
+}
+section#main article#projects .content h2 a,section#main article#projects .content .tags .tag a{
+	color: #a3d3f9;
+}
+section#main article#projects .content h2:hover a,section#main article#projects .content .tags .tag a:hover{
+	background-color: #a3d3f9;
+	color: white;
+}
+section#main article#thoughts .content h2 a,section#main article#thoughts .content .tags .tag a{
+	color: #333333;
+}
+section#main article#thoughts .content h2:hover a,section#main article#thoughts .content .tags .tag a:hover{
+	background-color: #333333;
+	color: white;
+}
+section#main article .art-title .dot{
+	color: #f4343f;
+}
+section#main article .content .tags .tag{
+	margin: 10px 5px;
+}
+section#main article .content .tags .tag a{
+	padding: 2px 5px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 /*HEADER.HTML*/
 header {
 	width: 100%;
-	height: 155px;
+	height: 100px;
+	float: left;
 }
 #top-bar{
 	height: 41px;
-	max-width: 800px;
+	width: 300px;
 	display: block;
-	margin: 0 auto;	
+	margin: 0 auto;
+	float: right;	
 }
 
 #tweet-icon{
@@ -227,6 +284,32 @@ margin-right: 5px;
 	width: 150px;
 	margin: 0 auto;
 }
+/*FOOTER.HTML*/
+footer {
+	border-top:1px solid #cecece;
+	width:100%;
+	margin-top: 40px;
+}
+footer section {
+	height:45px;
+}
+#footer-title {
+	float:left;
+	width:50px;
+	margin-top:12px;
+}
+#footer-title img {
+	max-width:100%;
+	margin-left:2px;
+}
+#copyright p {
+	color:#333;
+	font-size: 0.7em;
+	float: left;
+	margin: 15px 0 0 12px;
+	width: 77%;
+	max-width: 258px;
+}
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
 	section#main article .art-image{
@@ -241,7 +324,13 @@ margin-right: 5px;
 		max-width: 700px;
 		float:none
 	}
+	section#main article .content h2{
+		float: left;
+	}
 	section#main article .content .iconclass{
 		display:none;
+	}
+	section#main article .content .tags .tag{
+		float: left;
 	}
 }
