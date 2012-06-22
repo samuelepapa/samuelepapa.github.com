@@ -58,6 +58,7 @@ li{
 	list-style-type: none;	
 }
 a {
+	outline: none;
 	text-decoration:none;
 	color:#f44f59;
 	border:0;
