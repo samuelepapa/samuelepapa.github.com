@@ -5,8 +5,10 @@
     <title>First article experiments - </title>
   
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="http://apra.github.com/favicon.ico" />
   <link href='http://fonts.googleapis.com/css?family=Cabin:700|Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
   <link href="http://apra.github.com/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="http://apra.github.com/css/syntax.css" type="text/css" rel="stylesheet" />
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="http://apra.github.com/js/site.js"></script>
 </head>
@@ -64,7 +66,91 @@ pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
   <div class="content">
     <p>My first article in experiments</p>
 
-<script src="https://gist.github.com/2940801.js"> </script>
+<div class="highlight"><pre><code class="css"><span class="nt">html</span> <span class="p">{</span> 
+<span class="k">height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">body</span>
+<span class="p">{</span>
+<span class="k">background-image</span><span class="o">:</span><span class="sx">url(http://img535.imageshack.us/img535/2730/back4o.jpg)</span><span class="p">;</span>
+<span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<span class="k">height</span><span class="o">:</span><span class="k">auto</span><span class="p">;</span>
+
+<span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+<span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#wrapper</span> <span class="p">{</span>
+<span class="k">width</span><span class="o">:</span><span class="m">630px</span><span class="p">;</span>
+<span class="k">background-color</span><span class="o">:</span><span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">85</span><span class="p">);</span>
+<span class="k">margin</span><span class="o">:</span><span class="m">80px</span> <span class="k">auto</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">min-height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span> <span class="c">/* Mindesthöhe für moderne Browser */</span>
+<span class="k">height</span><span class="o">:</span><span class="k">auto</span> <span class="cp">!important</span><span class="p">;</span> <span class="c">/* Important Regel für moderne Browser */</span> 
+<span class="k">height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;</span> <span class="c">/* Mindesthöhe für den IE */</span> 
+<span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span> <span class="cp">!important</span><span class="p">;</span> <span class="c">/* FF Scroll-leiste */</span> 
+<span class="k">padding</span><span class="o">:</span><span class="m">50px</span> <span class="m">30px</span> <span class="m">100px</span><span class="p">;</span>
+<span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span><span class="m">5px</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nc">.form</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">383px</span><span class="p">;</span><span class="k">height</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span> <span class="k">margin</span><span class="o">:</span><span class="m">70px</span> <span class="m">125px</span> <span class="m">0</span><span class="p">;</span><span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span><span class="k">background-color</span><span class="o">:</span><span class="m">#eaeaea</span><span class="p">;</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span><span class="m">4px</span><span class="p">;</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="m">0px</span> <span class="m">4px</span> <span class="m">6px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">50</span><span class="o">,</span><span class="m">50</span><span class="o">,</span><span class="m">50</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">);}</span>
+<span class="nc">.formdiv</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span><span class="m">285px</span><span class="p">;</span><span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="k">auto</span><span class="p">;}</span>
+<span class="nc">.top</span> <span class="p">{</span>
+<span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span> <span class="k">font-size</span><span class="o">:</span><span class="m">30px</span><span class="p">;</span>
+<span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#3f3f3f</span><span class="p">;</span> <span class="k">text-shadow</span><span class="o">:</span><span class="m">0</span> <span class="m">1px</span> <span class="m">0</span>  <span class="nb">white</span><span class="p">;</span>
+<span class="k">height</span><span class="o">:</span><span class="m">50px</span><span class="p">;</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">margin</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.outertop</span> <span class="p">{</span> <span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="m">10px</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">620px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+<span class="nc">.top</span> <span class="nt">a</span> <span class="nt">img</span> <span class="p">{</span><span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="m">10px</span><span class="p">;}</span>
+
+
+<span class="nf">#trata</span> <span class="p">{</span><span class="k">height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;}</span>
+
+<span class="nc">.twelve</span><span class="p">{</span><span class="k">font-size</span><span class="o">:</span><span class="m">14px</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;}</span>
+
+<span class="nc">.left</span> <span class="p">{</span><span class="k">margin-left</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">28</span><span class="o">%</span><span class="p">;</span><span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#3f3f3f</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.center</span> <span class="p">{</span><span class="k">margin-left</span><span class="o">:</span><span class="m">60px</span><span class="p">;</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">28</span><span class="o">%</span><span class="p">;</span><span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#3f3f3f</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.right</span> <span class="p">{</span> <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span> <span class="k">margin-left</span><span class="o">:</span><span class="m">35px</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">25</span><span class="o">%</span><span class="p">;</span><span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#3f3f3f</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.search</span> <span class="p">{</span>
+<span class="k">margin</span><span class="o">:</span><span class="m">15px</span> <span class="m">50px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">padding</span><span class="o">:</span><span class="m">10px</span> <span class="m">25px</span> <span class="m">9px</span><span class="p">;</span><span class="k">font-size</span><span class="o">:</span> <span class="m">18px</span><span class="p">;</span>
+<span class="k">background</span><span class="o">:</span> <span class="m">#99CE1C</span><span class="p">;</span>
+<span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span><span class="m">4px</span><span class="p">;</span>
+<span class="k">border</span><span class="o">:</span><span class="m">1px</span> <span class="k">solid</span> <span class="m">#ccc</span><span class="p">;</span>
+<span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="k">inset</span> <span class="m">0</span> <span class="m">21px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">255</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
+<span class="k">color</span><span class="o">:</span><span class="nb">white</span><span class="p">;</span>
+<span class="k">text-shadow</span><span class="o">:</span><span class="m">0</span> <span class="m">1px</span> <span class="m">0</span> <span class="m">#2d2d2d</span><span class="p">;</span><span class="k">float</span><span class="o">:</span><span class="k">right</span><span class="p">;</span>
+
+<span class="p">}</span>
+<span class="nc">.search</span><span class="nd">:hover</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="k">inset</span> <span class="m">0</span> <span class="m">-21px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="p">)</span><span class="o">,</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">2px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">);</span><span class="k">margin-top</span><span class="o">:</span><span class="m">14px</span><span class="p">;}</span>
+<span class="nc">.search</span><span class="nd">:active</span><span class="p">{</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="k">inset</span> <span class="m">0</span> <span class="m">21px</span> <span class="m">10px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">05</span><span class="p">)</span><span class="o">,</span> <span class="m">0</span> <span class="m">-1px</span> <span class="m">2px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">);</span><span class="k">margin-top</span><span class="o">:</span><span class="m">16px</span><span class="p">;</span><span class="k">padding-bottom</span><span class="o">:</span><span class="m">9px</span><span class="p">;}</span>
+
+<span class="nc">.input</span> <span class="p">{</span>
+<span class="k">color</span><span class="o">:</span><span class="m">#2d2d2d</span><span class="p">;</span>
+<span class="k">padding</span><span class="o">:</span><span class="m">12px</span> <span class="m">18px</span> <span class="m">10px</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span> <span class="m">18px</span><span class="p">;</span>
+<span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span><span class="m">3px</span><span class="p">;</span>
+<span class="k">width</span><span class="o">:</span><span class="m">249px</span><span class="p">;</span>
+<span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">240</span><span class="o">,</span><span class="m">240</span><span class="o">,</span><span class="m">240</span><span class="o">,</span><span class="m">1</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">275</span><span class="o">,</span><span class="m">275</span><span class="o">,</span><span class="m">275</span><span class="o">,</span><span class="m">1</span><span class="p">)</span> <span class="p">);</span>
+<span class="k">border</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+<span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span><span class="k">inset</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">3px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
+<span class="k">margin</span><span class="o">:</span><span class="m">35px</span> <span class="m">0</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#oninput</span> <span class="p">{</span><span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span><span class="m">24px</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#2d2d2d</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">290px</span><span class="p">;</span> <span class="k">margin</span><span class="o">:-</span><span class="m">40px</span> <span class="k">auto</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.note</span> <span class="p">{</span><span class="k">font-family</span><span class="o">:</span> <span class="err">“</span><span class="n">Myriad</span> <span class="n">Pro</span><span class="err">”</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Tahoma</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="k">font-stretch</span><span class="o">:</span><span class="k">normal</span><span class="p">;</span>
+<span class="k">font-size</span><span class="o">:</span><span class="m">10px</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">font</span><span class="o">-</span><span class="n">smoothing</span><span class="o">:</span> <span class="n">antialiased</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#3f3f3f</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="k">block</span><span class="p">;</span> <span class="k">width</span><span class="o">:</span><span class="m">290px</span><span class="p">;</span> <span class="k">margin</span><span class="o">:</span><span class="m">0</span> <span class="k">auto</span><span class="p">;}</span>
+</code></pre>
+</div>
+
+
 
 
   </div>
@@ -98,10 +184,10 @@ pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
 <footer>
 <section>
 <div id="copyright">
+	<p>CC Attribution-Share Alike 3.0</p>
 	<div id="footer-title"> 
 		<img src="http://apra.github.com/images/title-all.png" /> 
-	</div>
-    <p>Copyright © 2012 CodeFeelgin - All right reserved</p>
+	</div> 
 </div>
 </section>
 </footer>

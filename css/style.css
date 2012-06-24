@@ -53,6 +53,8 @@ h2 {
 }
 img{
 	max-width:100%; /* And the magic happens... */
+	outline: none;
+	border:none;
 }
 li{
 	list-style-type: none;	
@@ -281,10 +283,6 @@ margin-right: 5px;
 #tit:hover #title img:first-child{
 	top: 35px;
 }
-#title img{
-	outline: none;
-	border:none;
-}
 #title{
 	width: 150px;
 	margin: 0 auto;
@@ -307,13 +305,18 @@ footer section {
 	max-width:100%;
 	margin-left:2px;
 }
+#copyright{
+	width: 340px;
+	display: block;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
 #copyright p {
 	color:#333;
 	font-size: 0.7em;
 	float: left;
 	margin: 15px 0 0 12px;
-	width: 77%;
-	max-width: 258px;
+	width: 150px
 }
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
