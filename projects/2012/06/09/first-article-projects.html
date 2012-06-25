@@ -56,31 +56,33 @@ pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
 </script>
     
     
-      <div class="post">
-  <h1>first article projects</h1>
-  <h4 class="large-bottom">
-    Posted on 2012-06-09 00:00:00 +0200
-     in <a href="/categories/projects">projects</a> 
-  </h4>
-  
-  <div class="content">
-    <p>My first article in projects</p>
+      <div class="clearer"></div>
+<section id="post">
+<section id="top-part">
+	<h2 class="art-title">first article projects<span class="dot">.</span></h2>
+	<div class="art-image">
+		<img src="http://apra.github.com/uploads/image2.jpg" />   
+	</div>
+	<div class="content">
+		<h2><a href="http://apra.github.com/categories/projects">projects</a></h2>
+		<div class="iconclass"><img src="http://apra.github.com/images/projects-logo.png" /></div>
+		<div class="tags">
+			
+     				<li class="tag"><a href="http://apra.github.com/tag/windowsphone">windowsphone</a></li>
+    		
+     				<li class="tag"><a href="http://apra.github.com/tag/csharp">csharp</a></li>
+    					
+		</div> 
+		<div id="date">09 06 2012</div>  
+	</div>
+</section>
+	<div id="thepost">
+   	<p>My first article in projects</p>
 
-  </div>
-  
-  <hr />
-  
-  
-    Tagged in
-    
-      <strong><a href="/tags/windowsphone">windowsphone</a></strong>, 
-    
-      <strong><a href="/tags/csharp">csharp</a></strong>
-    
-    <br />
-  
-  
-  <div class="next-prev-nav low-top">
+	</div>
+  </section>
+ 
+ <!-- <div class="next-prev-nav low-top">
     
       &laquo;&nbsp;<a href="/experiments/2012/06/09/experiments-article.html" rel="previous" title="First article experiments">First article experiments</a>
     
@@ -90,11 +92,44 @@ pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
         |
       
     
+    </div> -->
+<script>
+$(document).ready(function(){
+	if($(window).width()<900&&$(window).width()>850){
+
+		$('body').find('section#post #top-part .content h2').each(function(){
+			$(this).css('font-size',((2.5/900)*$(window).width())+'em')
+		});
+	}else{
+		$('body').find('section#post #top-part .content h2').each(function(){
+			$(this).css('font-size',('2.5em'))
+		});
+	}
+	$('body').find('section#post #top-part .content h2').each(function(){
+		$(this).data('size-font',$(this).css('font-size'));
+	});
+});
+$(window).resize(function(){
+	if($(window).width()<900&&$(window).width()>850){$('body').find('section#post #top-part .content h2').each(function(){
+			$(this).css('font-size',((2.5/900)*$(window).width())+'em')
+		});
+		}else{
+		$('body').find('section#post #top-part .content h2').each(function(){
+			$(this).css('font-size',('2.5em'))
+		});
+		}
+});
+</script>
 
 
     
     
-      Included file 'sidebar.html' not found in _includes directory
+      <div id="sidebar">
+	
+	
+	projects
+	ciao
+</div>
     
     
     <div class="clearer"></div>

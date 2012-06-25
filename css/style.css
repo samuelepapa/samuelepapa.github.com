@@ -72,7 +72,10 @@ a {
 	transition: all 0.1s linear;
 }
 a:hover {
-	color:#f4202c
+	color:#f4202c;
+}
+#post a:hover{
+	border-bottom: 1px dashed #f4202c;
 }
 .dot{
 	font-family: 'Cabin';
@@ -91,7 +94,7 @@ input:focus {
 /*
 * INDEX.HTML
 */
-section#main{
+section#main, section#post{
 	max-width:1000px;
 	margin:0 auto;
 }
@@ -103,7 +106,18 @@ section#main article h2.art-title{
 	margin: 1%;
 	width: 98%;
 	font-size: 4em;
+	text-transform: uppercase;
 	cursor: pointer;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+transition: all 0.2s linear;
+}
+section#post #top-part h2.art-title{
+	margin: 1%;
+	width: 98%;
+	font-size: 4em;
+	text-transform: uppercase;
 -webkit-transition: all 0.2s linear;
 -moz-transition: all 0.2s linear;
 -o-transition: all 0.2s linear;
@@ -115,17 +129,22 @@ section#main article .art-image{
 	margin: 1%;
 	cursor: pointer;
 }
-section#main article .content{
+section#post #top-part .art-image{
+	width: 68%;
+	float: left;
+	margin: 1%;
+}
+section#main article .content, section#post #top-part .content{
 	float: left;
 	width: 28%;
 }
-section#main article .content .iconclass{
+section#main article .content .iconclass, section#post #top-part .iconclass{
 	max-width:100px
 }
-section#main article .content h2{
+section#main article .content h2, section#post #top-part .content h2{
 	font-size:2.5em;
 }
-section#main article .content h2 a,section#main article .content h2{
+section#main article .content h2 a,section#main article .content h2, section#post #top-part .content h2{
 	font-family: 'Bebas';
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -155,13 +174,13 @@ section#main article#thoughts .content h2:hover a,section#main article#thoughts 
 	background-color: #333333;
 	color: white;
 }
-section#main article .art-title .dot{
+section#main article .art-title .dot, section#post #top-part .art-title .dot{
 	color: #f4343f;
 }
-section#main article .content .tags .tag{
+section#main article .content .tags .tag, section#post #top-part .content .tags .tag,  section#post #top-part .content #date{
 	margin: 10px 5px;
 }
-section#main article .content .tags .tag a{
+section#main article .content .tags .tag a, section#post #top-part .content .tags .tag a{
 	padding: 2px 5px;
 	cursor: pointer;
 	-webkit-transition: all 0.2s linear;
@@ -318,27 +337,35 @@ footer section {
 	margin: 15px 0 0 12px;
 	width: 150px
 }
+/*POST.HTML*/
+#thepost{
+	float: left;
+	width: 100%;
+}
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
-	section#main article .art-image{
+	section#main article .art-image, section#post #top-part .art-image{
 		max-width: 700px;
 		margin: 0 auto;
 		width:100%;
 		float:none;		
 	}
-	section#main article .content{
+	section#post #top-part .content{
+		width: 70%;
+	}
+	section#main article .content, section#post #top-part .content h2{
 		width: 100%;
 		margin: 0 auto;
 		max-width: 700px;
 		float:none
 	}
-	section#main article .content h2{
+	section#main article .content h2, section#post #top-part .content h2,  section#post #top-part .content #date{
 		float: left;
 	}
-	section#main article .content .iconclass{
+	section#main article .content .iconclass, section#post #top-part .content .iconclass{
 		display:none;
 	}
-	section#main article .content .tags .tag{
+	section#main article .content .tags .tag, section#post #top-part .content .tags .tag{
 		float: left;
 	}
 }
