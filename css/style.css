@@ -72,10 +72,11 @@ a {
 	transition: all 0.1s linear;
 }
 a:hover {
-	color:#f4202c;
+
 }
 #post a:hover{
-	border-bottom: 1px dashed #f4202c;
+		background-color:#f4343f;
+	color:white;
 }
 .dot{
 	font-family: 'Cabin';
@@ -113,7 +114,7 @@ section#main article h2.art-title{
 -o-transition: all 0.2s linear;
 transition: all 0.2s linear;
 }
-section#post #top-part h2.art-title{
+section#post #top-part h1.art-title{
 	margin: 1%;
 	width: 98%;
 	font-size: 4em;
@@ -177,9 +178,13 @@ section#main article#thoughts .content h2:hover a,section#main article#thoughts 
 section#main article .art-title .dot, section#post #top-part .art-title .dot{
 	color: #f4343f;
 }
-section#main article .content .tags .tag, section#post #top-part .content .tags .tag,  section#post #top-part .content #date{
+section#main article .content .tags .tag, section#post #top-part .content .tags .tag{
 	margin: 10px 5px;
 }
+#date{
+	margin: 1%;
+}
+
 section#main article .content .tags .tag a, section#post #top-part .content .tags .tag a{
 	padding: 2px 5px;
 	cursor: pointer;
@@ -340,7 +345,59 @@ footer section {
 /*POST.HTML*/
 #thepost{
 	float: left;
+	width: 68%;
+	margin: 1%;
+}
+#intro{
+height: 48px;
+line-height: 48px;
+margin-left: 10px;
+width: 85%;
+float: left;
+overflow: hidden;	
+}
+#bio{
+display: block;
+margin: 70px auto 0;
+height: 50px;
+max-width: 580px;	
+}
+#photo{
+	max-width: 46px;
+float: left;
+}
+#social-bar{
 	width: 100%;
+float: left;
+padding: 6px 0 0 6px;
+border-radius: 5px;
+margin: 10px 0 10px 7px;
+}
+#social-bar li {
+float: left;
+height: 25px;
+padding: 3px 0 0 0;
+}
+#social-bar h3,#social-bar h3 span{
+	font-family: 'Bebas';
+}
+#social-bar h3 {
+margin: 0 20px 0 0;
+float: left;
+}
+/*SIDEBAR.HTML*/
+#sidebar{
+	float: left;
+	width: 28%;
+}
+#sideposts li a,#sideposts li p{
+	padding: 0 5px;
+}
+#sideposts li p{
+	font-size: 0.8em;
+}
+#sidebar ul{
+	margin: 20px 0;
 }
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
@@ -368,4 +425,9 @@ footer section {
 	section#main article .content .tags .tag, section#post #top-part .content .tags .tag{
 		float: left;
 	}
+}
+@media (max-width: 644px) {
+		#googleplusli{
+			display: none;
+		}
 }
