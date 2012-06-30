@@ -361,6 +361,9 @@ display: block;
 margin: 70px auto 0;
 height: 50px;
 max-width: 580px;	
+border: 1px solid #CCC;
+padding: 20px;
+cursor: pointer;
 }
 #photo{
 	max-width: 46px;
@@ -385,6 +388,9 @@ padding: 3px 0 0 0;
 margin: 0 20px 0 0;
 float: left;
 }
+#disqus_thread{
+	margin-top: 20px;
+}
 /*SIDEBAR.HTML*/
 #sidebar{
 	float: left;
@@ -398,6 +404,12 @@ float: left;
 }
 #sidebar ul{
 	margin: 20px 0;
+}
+/*ARCCHIVES*/
+#archive{
+	margin:0 auto;
+	max-width:600px;
+	display: block;
 }
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
