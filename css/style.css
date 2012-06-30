@@ -145,6 +145,10 @@ section#main article .content .iconclass, section#post #top-part .iconclass{
 section#main article .content h2, section#post #top-part .content h2{
 	font-size:2.5em;
 }
+ section#post #top-part .content h2 a{
+ 	text-transform: uppercase;
+ 	font-family: Bebas;
+ }
 section#main article .content h2 a,section#main article .content h2, section#post #top-part .content h2{
 	font-family: 'Bebas';
 	-webkit-transition: all 0.2s linear;
@@ -183,6 +187,7 @@ section#main article .content .tags .tag, section#post #top-part .content .tags 
 }
 #date{
 	margin: 1%;
+	font-size: 0.8em;
 }
 
 section#main article .content .tags .tag a, section#post #top-part .content .tags .tag a{
@@ -211,6 +216,13 @@ header {
 	background-color: #F44F59;
 	height: 41px;
 	float: left;
+		-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+#tweet-icon:hover{
+	background-color: #f4343f;
 }
 #top-bar #tweet{
 	font-family: 'Cabin';
@@ -410,6 +422,18 @@ float: left;
 	margin:0 auto;
 	max-width:600px;
 	display: block;
+}
+#archive time{
+float: left;
+margin: 2px 10px;
+color: #616161;	
+}
+#archive a{
+	padding:0 5px;	
+	}
+#archive a:hover{
+	background-color: #f4343f;
+	color: white;
 }
 /* MEDIA QUERIES*/
 @media (max-width: 850px) {
