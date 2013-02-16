@@ -37,7 +37,7 @@ p, article, section, header, div, span, a{
 }
 p{
 	color:#616161;
-	font-size: 0.9em
+	font-size: 0.8em
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family:'Cabin';
@@ -359,6 +359,10 @@ footer section {
 	float: left;
 	width: 68%;
 	margin: 1%;
+}
+#thepost p{
+	line-height:23px;
+	padding:5px 0;
 }
 #intro{
 height: 48px;
