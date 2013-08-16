@@ -50,6 +50,7 @@ h1 {
 h2 {
 	font-size: 1.2em;
 	font-weight: normal;
+	padding: 7px 0 2px 0;
 }
 img{
 	max-width:100%; /* And the magic happens... */
@@ -73,6 +74,30 @@ a {
 }
 a:hover {
 
+}
+pre{
+	font-family: "Open-Sans";
+	background-color: #F8F8F8;
+border: 1px solid #DDD;
+font-size: 13px;
+line-height: 19px;
+overflow: auto;
+padding: 6px 10px;
+border-radius: 3px;
+}
+code{
+margin: 0 2px;
+padding: 0px 5px;
+border: 1px solid #DDD;
+background-color: #F8F8F8;
+border-radius: 3px;
+}
+pre code{
+margin: 0;
+padding: 0;
+background-color: transparent;
+border: none;
+white-space:pre;
 }
 #post a:hover{
 		background-color:#f4343f;
@@ -403,6 +428,12 @@ padding: 3px 0 0 0;
 #social-bar h3 {
 margin: 0 20px 0 0;
 float: left;
+}
+#post li{
+	font-size:0.8em;
+	font-family:"Open Sans";
+	color:#616161;
+	text-indent:15px;
 }
 #disqus_thread{
 	margin-top: 20px;
