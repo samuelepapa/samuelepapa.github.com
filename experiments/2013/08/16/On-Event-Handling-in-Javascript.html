@@ -89,7 +89,7 @@ pattern=/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/;
 
 <h2>The concept</h2>
 
-<p>With Event Handling we want to be able to know when something happen and do something when that thing happen. To make this simple and start using the words used in the code let's make an example. I ask my girlfriend to kiss me everytime a firework is <code>fired</code>, so she will <code>handle</code> me a kiss (let's assume handle means give) every time they <code>emit</code> a firework.</p>
+<p>With Event Handling we want to be able to know when something happens and do something when that thing happens. To make this simple and use the words used in the code let's make an example. I ask my girlfriend to kiss me every time a firework is <code>fired</code>, so she will <code>handle</code> me a kiss (let's assume handle means give) every time they <code>emit</code> a firework.</p>
 
 <h2>The pseudo-code</h2>
 
@@ -111,7 +111,7 @@ function removehandler(name of the event, the thing i do){
 
 <h3>Analysis</h3>
 
-<p>The Node code is interesting because accepts every possibility: multiple things to do with multiple arguments per thing. Another thing to observe when analyzing a pattern is the way it's implemented: you need to define a specific object with the point of remembering and firing events. This is used when a big app needs to know when some particular thing happens without having to redefine the event handler for each module used in the app.</p>
+<p>The Node code is interesting because it accepts every possibility: multiple things to do with multiple arguments per thing. Another thing to observe when analyzing a pattern is the way it's implemented: you need to define a specific object with the point of remembering and firing events. This is used when a big app needs to know when a particular thing happens without having to redefine the event handler for each module used in the app.</p>
 
 <h4>Pros</h4>
 
@@ -130,11 +130,11 @@ function removehandler(name of the event, the thing i do){
 
 <h2>The prototype way</h2>
 
-<p>I've read about the prototype pattern <a href="http://motionharvest.com/2013/02/01/custom-events/">here</a>. This is similar to the node way, but here you define the event dispatcher for each object, in his prototype. It's similar to jQuery, where you associate the event to the object <code>$('div').on('...',fun)</code>.</p>
+<p>I've read about the prototype pattern <a href="http://motionharvest.com/2013/02/01/custom-events/">here</a>. This is similar to the <em>node way</em>, but here you define the event dispatcher for each object, in his prototype. It's similar to jQuery, where you associate the event to the object <code>$('div').on('...',fun)</code>.</p>
 
 <h3>Analysis</h3>
 
-<p>This pattern let you define event for each object you create, it's useful if you are creating a game or having to check when something happen only to a specific object, rather than to all objects like it. I think this approach is very useful also when used with the Creational Pattern (described in the book <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential Javascript Design Pattern</a>)</p>
+<p>This pattern lets you define an event for each object you create, it's useful if you are creating a game or if you need to check when something happen only to a specific object, rather than to all objects like it. I think this approach is very useful also when it's used with the Creational Pattern (described in the book <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential Javascript Design Pattern</a>)</p>
 
 <h4>Pros</h4>
 
@@ -153,7 +153,7 @@ function removehandler(name of the event, the thing i do){
 
 <h2>The way I did it</h2>
 
-<p>Here is the code I created for my application. I started asking myself "<em>Will I ever need multiple functions happening at the same event?</em>" and then "<em>Will I need to remove only one of these functions?</em>". I then removed all the useless parts in the Node code and sticked the event handler to the input module of my app, since it will manage all inputs and then send them to the core.</p>
+<p>Here is the code I've created for my application. I started by asking myself "<em>Will I ever need multiple functions happening at the same event?</em>" and then "<em>Will I need to remove only one of these functions?</em>". I then removed all the useless parts in the Node code and sticked the event handler to the input module of my app, since it will manage all the inputs and then send them to the core.</p>
 
 <p>The code:</p>
 
