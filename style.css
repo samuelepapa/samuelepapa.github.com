@@ -1,0 +1,223 @@
+/*Ambiguity is solved by parentage R+L=J*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+h1, h2, h3, h4, h5, h6, span{
+    font-family: 'Fira Sans', sans-serif;
+}
+.copy, .social, .work, footer {
+    font-family: 'Fira Mono', monospace;
+}
+a{
+    text-decoration: none;
+}
+.center{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+    display: block
+}
+
+
+
+.pres{
+    background-color: #353b85;
+    background-image: url("resources/media/subtle-dots.png")
+}
+    .spacer{
+        margin: 0 80px
+    }
+    /*.proj article:first-child{
+        margin-left: 80px !important
+    }*/
+    .pres .head{
+        padding-top: 60px;
+    }
+    .pres svg{
+        width: 60px;
+        height: 32px
+    }
+        .pres svg .st0 {
+            fill: #F4F4F4;
+        }
+        .pres svg .st1 {
+            fill: #F36B21;
+        }
+    .pres span, .pres h2, .pres h1, .pres .work,.pres .social{
+        color: white;
+    }
+
+    .pres .jesuis{
+        padding-top:80px
+    }
+    .pres span{
+        width: 100%;
+        display: block;
+        font-size: 32px;
+        font-weight: lighter;
+        margin: 7px 0
+    }
+    .pres h1,.pres h2{
+        display: inline-block;
+        font-size: 32px;
+        font-weight: normal;
+        padding: 0;
+        margin: 0
+    }
+    .pres .work{
+        color: #aab9e0;
+        padding-top: 30px;
+        font-size: 24px
+    }
+    .pres .social{
+        cursor: default;
+        padding-top: 120px;
+        padding-bottom: 90px
+    }
+        .pres .social a{
+            color: #aab9e0;
+            -webkit-transition: color 150ms ease-in-out, border 150ms linear;
+            -moz-transition: color 150ms ease-in-out, border 150ms linear;
+            transition: color 150ms ease-in-out, border 150ms linear;
+            padding-bottom: 5px;
+            border-bottom: 1px dotted #869ce2;
+        }
+        .pres .social a:hover{
+            color: white;
+            border-bottom: 1px dotted #FA6900;
+        }
+
+/**/
+.proj{
+    background-color: #f3f3f3;
+
+}
+    .proj article{
+        margin: 30px 30px 0 0;
+        display: inline-block;
+        width: 100%;
+        -webkit-transition: max-width 150ms ease-out;
+        -moz-transition: max-width 150ms ease-out;
+        transition: max-width 150ms ease-out;
+    }
+    
+    
+    .proj article a{
+        border: 1px solid #869ce2;
+        display: block;
+        width: 100%
+    }
+    .proj article a svg{
+        width: 100%
+    }
+        .proj .head, .proj .body{
+            padding: 40px
+        }
+        /**/
+        .proj .head{
+            display: block;
+            border-bottom: 1px solid #869ce2;
+            padding-bottom: 30px
+        }
+        .proj article a:hover .head{
+            background-color: #353b85;
+            -webkit-transition: background-color 200ms ease-out;
+            -moz-transition: background-color 200ms ease-out;
+            transition: background-color 200ms ease-out;
+        }
+        .proj article a:hover .arrow{
+            transform: translate(10px,0)
+        }
+        .proj article a:not( :hover ) .arrow{
+            -webkit-transition: transform 200ms ease-out;
+            -moz-transition: transform 200ms ease-out;
+            transition: transform 200ms ease-out;
+        }
+            .proj .head h4, .proj .head h3{
+                font-weight: 400;
+                margin: 0
+            }
+            /**/
+            .proj .head h3{
+                color: #2e3688;
+                -webkit-transition: color 200ms ease-out;
+                -moz-transition: color 200ms ease-out;
+                transition: color 200ms ease-out;
+                
+            }
+            .proj article a:hover .head h3{
+                color: white
+            }
+            .proj .head h4{
+                font-family: 'Fira Mono', monospace;
+                margin-top: 10px;
+                color: #869ce2;
+            }
+            .proj .head .arrow {
+                width: 47px;
+                display: block;
+                height: 15px;
+                padding-top: 25px;
+                -webkit-transition: transform 200ms ease-out 200ms;
+                -moz-transition: transform 200ms ease-out 200ms;
+                transition: transform 200ms ease-out 200ms;
+            }
+                .proj .head .arrow .st0{
+                    fill:none;
+                    stroke:#899BCF;
+                    stroke-miterlimit:10;
+                }
+        .proj .body{
+           
+        }
+footer{
+    color: #aab9e0;
+    margin: 60px 0 30px;
+    border-bottom: 1px solid #869ce2;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+footer div {
+    display: inline-block;
+}
+footer .copy{
+    color: #D1D1D1
+}
+footer .social a{
+    color: #aab9e0;
+    -webkit-transition: color 150ms ease-in-out, border 150ms linear;
+    -moz-transition: color 150ms ease-in-out, border 150ms linear;
+    transition: color 150ms ease-in-out, border 150ms linear;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #869ce2;
+}
+footer .social a:hover{
+    border-bottom: 1px dotted #FA6900;
+    color: #2e3688
+}
+
+
+@media (max-width: 400px) {
+    .pres span, .pres h1,.pres h2{
+        font-size: 24px
+    }
+    .pres .work{
+        font-size: 18px
+    }
+    .spacer{
+        margin: 0 20px
+    }
+    .proj .head, .proj .body{
+        padding: 20px
+    }
+    .proj article {
+        margin: 30px 0 0 0;
+    }
+}
+@media (max-width: 1100px) {
+    .proj article {
+        max-width: 100% !important
+    }
+}
