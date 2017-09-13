@@ -87,3 +87,4 @@ for(let i=0;i<svgs.length;i++){
     svgs[i].parentNode.parentNode.parentNode.style.maxWidth = 80 + svgW + ( svgW / gR ) + "px"
 
 }
+document.getElementsByClassName("copy")[0].innerHTML = "&copy; "+ (new Date()).getFullYear() +" &middot;"
