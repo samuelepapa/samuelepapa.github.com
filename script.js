@@ -1,3 +1,4 @@
+console.log("If you feel generous, you can donate some mBTC here: 1MCrtX7qt4fxYMoz5SoS3xyebdPUD9irWr \n I forever thank you.");
 window.sr = ScrollReveal();
 sr.reveal(".jesuis", { duration: 1000, distance: '30px', easing: 'ease-out' })
 sr.reveal(".pres .work", {
