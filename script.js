@@ -82,10 +82,13 @@ for(let i=0;i<svgs.length;i++){
     //console.log(svgs[i].style.maxWidth)
     //console.log(svgs[i].parentNode.style)
     let svgW = parseInt(svgs[i].style.maxWidth);
+    let svgH = parseInt(svgs[i].viewBox.baseVal["height"]);
     let gR = 1.6180339;
     gR = Math.PI
-
-    svgs[i].parentNode.parentNode.parentNode.style.maxWidth = 80 + svgW + ( svgW / gR ) + "px"
+    let g_increase = Math.min(svgH, svgW) / gR;
+    console.log(g_increase)
+    console.log(svgW/gR)
+    svgs[i].parentNode.parentNode.parentNode.style.maxWidth = 80 + svgW + g_increase + "px"
 
 }
 document.getElementsByClassName("copy")[0].innerHTML = "&copy; "+ (new Date()).getFullYear() +" &middot;"
