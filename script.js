@@ -31,8 +31,8 @@ function type() {
 };
 
 
-if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-window.onmousewheel = document.onmousewheel = wheel;
+//if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+//window.onmousewheel = document.onmousewheel = wheel;
 var running = 0;
 var distance = 100;
 var arrival = $(window).scrollTop()
