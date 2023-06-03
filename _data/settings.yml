@@ -1,0 +1,26 @@
+menu:
+# - {name: 'people', url: '/people'}
+- {name: 'publications', url: '/publications'}
+# - {name: 'courses', url: '/courses'}
+- {name: 'cv', url: '/cv'}
+- {name: 'contact', url: '/contact'}
+- {name: 'posts', url: '/posts'}
+
+people:
+- {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
+- {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
+- {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
+
+courses:
+- {name: 'Vector Calculus', url: 'vector-calculus'}
+- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
+- {name: 'Stellar Structures', url: 'stellar-structures'}
+
+social:
+- {icon: 'fab fa-github', link: 'https://github.com/samuelepapa'}
+- {icon: 'fab fa-twitter', link: 'https://twitter.com/samuelepapa_'}
+- {icon: 'ai ai-google-scholar', link: 'https://scholar.google.com/citations?user=0c2MtX4AAAAJ&hl=en&inst=17961610117187139930&oi=ao'}
+- {icon: 'fab fa-linkedin', link: 'https://www.linkedin.com/in/samuelepapa'}
+
+contacts:
+- {name: 'Samuele Papa', title: 'PhD Student', department: 'Institute van Informatic', institution: 'University of Amsterdam', email: 's(dot)papa(at)uva(dot)nl', office: 'Lab 42, Science Park', image: 'assets/img/old_phone.jpg'}

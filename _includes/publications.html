@@ -1,0 +1,44 @@
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Publications</h3>
+    {% if page.title == "Home" %}
+      {% for item in site.data.publications.featured %}
+      <div class="d-flex flex-row">
+        <div class="w-75 m-1">
+          <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}">{{ item.name }}</a></p>
+          <span class="p-1 text-dark">@ {{ item.venue }}</span>
+          <div class="d-flex flex-wrap" style="font-size: small;">
+            {% for author in item.authors %}
+              <p class="p-1 mb-1 text-muted" style="font-style:italic;text-decoration: underline;">{{ author }}</p>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="w-25 m-1" style="display: flex;justify-content: center;align-items: center;">
+          <a href="{{ item.url }}">
+          <img class="img-fluid thumb-image" src="{{ site.github.url }}/assets/publications/{{ item.image }}" alt="{{ item.name }}">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      {% for item in site.data.publications.index %}
+        <div class="d-flex flex-row">
+          <div class="w-75 m-1">
+            <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}">{{ item.name }}</a></p>
+            <span class="p-1 text-dark">@ {{ item.venue }}</span>
+            <div class="d-flex flex-wrap" style="font-size: small;">
+              {% for author in item.authors %}
+                <p class="p-1 mb-1 text-muted" style="font-style:italic;text-decoration: underline;">{{ author }}</p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="w-25 m-1" style="display: flex;justify-content: center;align-items: center;">
+            <a href="{{ item.url }}">
+            <img class="img-fluid thumb-image" src="{{ site.github.url }}/assets/publications/{{ item.image }}" alt="{{ item.name }}">
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
