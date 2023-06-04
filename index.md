@@ -10,5 +10,5 @@ I am a Ph.D. candidate at the <a href="https://www.uva.nl/" target="_blank">Univ
 </p>
 <p class="text-justify" style="overflow-wrap: break-word;hyphens: auto;">
 Under the guidance of supervisors Jan-Jakob Sonke and Efstratios Gavves, my research centers on utilizing deep generative models to improve imaging techniques.
-I'm passionate about bridging the gap between advanced technology and applications, and I believe that interdisciplinary expertise will be the key to solving the most challenging problems of our time.
+I'm passionate about bridging the gap between advanced technology and applications, and I believe that interdisciplinary expertise will be the key to solving the most challenging problems of our time. 
 </p>
