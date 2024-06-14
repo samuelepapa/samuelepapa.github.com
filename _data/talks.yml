@@ -1,0 +1,4 @@
+index:
+- {name: 'Diffusion Models Theory', url: 'https://uvafomo.github.io/', pdf: 'diffusion_theory.pdf', image: 'diffusion_lecture.png',venue: 'Foundation Models Course UvA'}
+- {name: 'JAX. An Introduction to Deep Learning Programming Principles', url: 'https://hack4her.github.io/', pdf: 'hack4her_jax_samuele_papa.pdf', image: 'hack4her_workshop.png',venue: 'Hack4Her Amsterdam'}
+- {name: 'Deep Learning for Image Reconstruction', url: 'http://www.dlinrt.org/2024-1/index.html', pdf: 'dlinrt_2024_image_recon.pdf', image: 'dlinrt_2024.png',venue: 'Deep Learning in Radiotherapy'}

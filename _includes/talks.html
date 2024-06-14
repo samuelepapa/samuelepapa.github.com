@@ -1,0 +1,25 @@
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Talks</h3>
+    {% for item in site.data.talks.index %}
+        <div class="d-flex flex-row align-middle" style="background-color: aliceblue;">
+            <div class="w-75 m-1 align-middle" style="position:relative">
+                <div style="position:absolute; top:50%; transform: translate(0, -50%);">
+                        <p class="p-1"><a class="bg-primary text-white p-2" target="_blank" href="{{ site.github.url }}/assets/talks/{{ item.pdf }}">{{ item.name }}</a></p>
+                        <span class="p-1 text-dark fst-italic"><a href="{{item.url}}" target="_blank">@ {{ item.venue }}</a></span>
+                </div>
+                <!-- <div class="d-flex flex-wrap" style="font-size: small;">
+                    {% for author in item.authors %}
+                        <p class="p-1 mb-1 text-muted" style="font-style:italic;">{{ author }}</p>
+                    {% endfor %}
+                </div> -->
+            </div>
+            <div class="w-25 m-1" style="display: flex;justify-content: center;align-items: center;">
+                <a href="{{ site.github.url }}/assets/talks/{{ item.pdf }}" target="_blank">
+                <img class="img-fluid thumb-image" src="{{ site.github.url }}/assets/talks/img/{{ item.image }}" alt="{{ item.name }}">
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+</div>
