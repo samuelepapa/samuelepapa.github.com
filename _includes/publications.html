@@ -5,7 +5,7 @@
       {% for item in site.data.publications.featured %}
       <div class="d-flex flex-row">
         <div class="w-75 m-1">
-          <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}">{{ item.name }}</a></p>
+          <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}" target="_blank">{{ item.name }}</a></p>
           <span class="p-1 text-dark">@ {{ item.venue }}</span>
           <div class="d-flex flex-wrap" style="font-size: small;">
             {% for author in item.authors %}
@@ -24,7 +24,7 @@
       {% for item in site.data.publications.index %}
         <div class="d-flex flex-row">
           <div class="w-75 m-1">
-            <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}">{{ item.name }}</a></p>
+            <p class="p-2"><a class="bg-primary text-white p-2" href="{{ item.url }}" target="_blank">{{ item.name }}</a></p>
             <span class="p-1 text-dark">@ {{ item.venue }}</span>
             <div class="d-flex flex-wrap" style="font-size: small;">
               {% for author in item.authors %}
